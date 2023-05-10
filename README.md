@@ -6,15 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm ssr` - production
+### `npm run start:ssr` - production
 
 Runs the app in the ssr mode.\
 Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
-Hot module loading will not work in ssr mode.
-The page will launch from the build folder.\
+Hot module loading will not work in ssr mode.\
+The page will launch from the build folder.
 
-### `npm start` - development
+### `npm run start:dev` - development
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
