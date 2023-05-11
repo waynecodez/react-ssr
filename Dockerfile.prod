@@ -1,0 +1,12 @@
+FROM node:alpine as builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+EXPOSE 8080
+
+FROM minddocdev/node-alpine
+WORKDIR /home
+COPY --from=builder /app /home
+CMD ["npm", "run", "start:ssr"]

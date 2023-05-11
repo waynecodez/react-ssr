@@ -23,6 +23,10 @@
 	"scripts": {
 		"start:dev": "react-scripts start",
 		"start:ssr": "node server/index.js",
+		"start:client": "docker-compose run client",
+		"start:server": "docker-compose run server",
+		"docker:up": "docker-compose up",
+		"docker:down": "docker-compose down",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"

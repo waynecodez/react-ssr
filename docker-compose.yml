@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: client
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/home/src
+      - ./public:/home/public
+    platform: linux/arm64
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: server
+    ports:
+      - 8080:8080
+    platform: linux/arm64
